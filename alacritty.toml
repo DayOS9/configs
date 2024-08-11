@@ -1,0 +1,21 @@
+import = [ "~/.config/alacritty/themes/themes/ubuntu.toml" ]
+
+[env]
+TERM = "$TERM"
+
+[font]
+normal.family = "Hack Nerd Font"
+size = 11
+
+[colors.cursor]
+cursor = "#FF1493"
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_timeout = 0
+
+[mouse]
+hide_when_typing = true
+
+[window]
+startup_mode = "Fullscreen"
