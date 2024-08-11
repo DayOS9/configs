@@ -67,6 +67,11 @@ shift + alt - 5 : yabai -m window --space 5;
 shift + alt - 6 : yabai -m window --space 6;
 shift + alt - 7 : yabai -m window --space 7;
 
+#open kitty with alt-enter command
+alt - return : open -n /Applications/kitty.app
+#open browser (firefox) with alt-shift-enter command
+cmd + shift - return : open -n /Applications/Firefox.app
+
 # -- Starting/Stopping/Restarting Yabai --
 
 # stop/start/restart yabai
