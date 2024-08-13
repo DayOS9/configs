@@ -40,8 +40,9 @@ unset ZSH_AUTOSUGGEST_USE_ASYNC
 
 #this is for alacritty
 #export TERM=alacritty
-export TERM=xterm-256color
+#export TERM=xterm-256color
 #export TERM=screen-256color
+export TERM=xterm-kitty
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
