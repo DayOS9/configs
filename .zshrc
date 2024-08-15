@@ -53,3 +53,4 @@ function yy() {
 	rm -f -- "$tmp"
 }
 eval "$(zoxide init zsh)"
+source <(fzf --zsh)
