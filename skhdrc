@@ -70,7 +70,7 @@ alt - 7 : yabai -m window --space 7;
 #open kitty with alt-enter command
 alt - return : open -n /Applications/kitty.app
 #open browser (firefox) with alt-shift-enter command
-cmd + shift - return : open -n /Applications/Firefox.app
+cmd + shift - return : yabai -m rule --add app="Firefox" space=$(yabai -m query --spaces --space | jq -r '.index') && open -na "Firefox" && sleep 0.5 && yabai -m rule --remove app="Firefox"
 
 # -- Starting/Stopping/Restarting Yabai --
 
