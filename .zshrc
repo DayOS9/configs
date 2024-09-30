@@ -38,12 +38,16 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # this is to fix p10k git issues ?
 unset ZSH_AUTOSUGGEST_USE_ASYNC
 
+#this is for miniconda
+# export PATH="/Users/Daois2/miniconda3/bin:$PATH"  # commented out by conda initialize
+
 #this is for alacritty
 #export TERM=alacritty
 #export TERM=xterm-256color
 #export TERM=screen-256color
 export TERM=xterm-kitty
 
+#yazi func that will leave at last directory visited
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
@@ -52,5 +56,26 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+#this is for zoxide and fzf plugin to work (also needed for yazi)
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/Users/Daois2/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/Daois2/miniconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/Daois2/miniconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/Daois2/miniconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
+
+#when homebrew installing postgresql need to add this path
+export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
+export PGPORT=8888
