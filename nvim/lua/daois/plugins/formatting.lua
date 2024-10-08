@@ -16,6 +16,11 @@ return {
 				async = false,
 				timeout_ms = 3500,
 			},
+			formatters = {
+				black = {
+					prepend_args = { "--fast" },
+				},
+			},
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
