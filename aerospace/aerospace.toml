@@ -87,7 +87,7 @@ outer.right =      6
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
 alt-enter = '''exec-and-forget osascript -e '
-do shell script "open -n /Applications/kitty.app"
+do shell script "open -n /Applications/Kitty.app/"
 '
 '''
 
@@ -205,6 +205,10 @@ alt-shift-semicolon = 'mode service'
 3 = 'main'
 4 = 'main'
 5 = ['secondary', 'main']
+
+[[on-window-detected]]
+if.app-id = 'FaceTime'
+run = 'layout floating'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
