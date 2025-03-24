@@ -51,4 +51,4 @@ source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 #for ssh to work with kitty
-alias ssh="kitten ssh"
+#alias ssh="kitten ssh"
